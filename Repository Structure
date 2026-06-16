@@ -1,0 +1,122 @@
+sentinel-ledger-ai/
+│
+├── README.md
+├── LICENSE
+├── .gitignore
+├── .env.example
+├── docker-compose.yml
+├── Dockerfile
+├── Makefile
+├── pyproject.toml
+├── requirements.txt
+│
+├── docs/
+│   ├── architecture.md
+│   ├── aws_exam_mapping.md
+│   ├── data_dictionary.md
+│   ├── model_cards.md
+│   ├── responsible_ai.md
+│   └── interview_story.md
+│
+├── data/
+│   ├── raw/
+│   ├── bronze/
+│   ├── silver/
+│   ├── gold/
+│   └── sample/
+│
+├── sql/
+│   ├── 01_create_external_tables.sql
+│   ├── 02_data_quality_checks.sql
+│   ├── 03_feature_queries.sql
+│   ├── 04_graph_prep.sql
+│   └── 05_dashboard_queries.sql
+│
+├── notebooks/
+│   ├── 01_eda_fraud.ipynb
+│   ├── 02_feature_engineering.ipynb
+│   ├── 03_anomaly_detection.ipynb
+│   ├── 04_graph_analytics.ipynb
+│   ├── 05_forecasting.ipynb
+│   ├── 06_nlp_semantic_search.ipynb
+│   └── 07_cv_anomaly_detection.ipynb
+│
+├── src/
+│   ├── config/
+│   ├── data/
+│   │   ├── ingest.py
+│   │   ├── validate.py
+│   │   ├── clean.py
+│   │   └── resolve_entities.py
+│   │
+│   ├── features/
+│   │   ├── transaction_features.py
+│   │   ├── graph_features.py
+│   │   ├── time_features.py
+│   │   ├── nlp_features.py
+│   │   └── cv_features.py
+│   │
+│   ├── models/
+│   │   ├── fraud_classifier.py
+│   │   ├── aml_risk_model.py
+│   │   ├── anomaly_model.py
+│   │   ├── graph_model.py
+│   │   ├── forecast_model.py
+│   │   ├── pytorch_model.py
+│   │   └── tensorflow_model.py
+│   │
+│   ├── api/
+│   │   ├── main.py
+│   │   ├── schemas.py
+│   │   ├── routes_predict.py
+│   │   ├── routes_graph.py
+│   │   ├── routes_chat.py
+│   │   └── routes_health.py
+│   │
+│   ├── agent/
+│   │   ├── analyst_agent.py
+│   │   ├── tools_sql.py
+│   │   ├── tools_graph.py
+│   │   ├── tools_model_explain.py
+│   │   └── guardrails.py
+│   │
+│   └── utils/
+│       ├── logging.py
+│       ├── metrics.py
+│       └── aws_clients.py
+│
+├── app/
+│   └── gradio_app.py
+│
+├── bentoml/
+│   ├── service.py
+│   └── bentofile.yaml
+│
+├── modal/
+│   └── serve_llm.py
+│
+├── k8s/
+│   ├── deployment.yaml
+│   ├── service.yaml
+│   ├── kserve-inferenceservice.yaml
+│   └── canary-ab-test.yaml
+│
+├── r/
+│   └── statistical_validation.R
+│
+├── java/
+│   └── TransactionRiskScorer.java
+│
+├── scala/
+│   └── SparkFeatureJob.scala
+│
+├── tests/
+│   ├── test_data_validation.py
+│   ├── test_features.py
+│   ├── test_models.py
+│   ├── test_api.py
+│   └── test_agent.py
+│
+└── .github/
+    └── workflows/
+        └── ci.yml
